@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusGames | Tienda de Videojuegos</title>
+    <!-- Fuente moderna de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Archivo de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos de boxicons para el carrito y otros elementos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- Menú de Navegación -->
+    <header class="header" id="header">
+        <div class="logo">
+            <i class='bx bxs-joystick'></i>
+            <span>NexusGames</span>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#hero" class="nav-link">Inicio</a></li>
+                <li><a href="#store" class="nav-link">Tienda</a></li>
+                <li><a href="#offers" class="nav-link">Ofertas</a></li>
+                <li><a href="#footer" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <!-- Buscador -->
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Buscar juego...">
+                <i class='bx bx-search'></i>
+            </div>
+            <!-- Carrito -->
+            <div class="cart-icon">
+                <i class='bx bx-cart'></i>
+                <span id="cart-counter" class="cart-counter">0</span>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Principal (Hero Section) -->
+    <section class="hero" id="hero">
+        <div class="hero-content fade-in">
+            <h1>Explora Mundos <span class="text-neon">Infinitos</span></h1>
+            <p>Descubre los mejores títulos, aventuras épicas y acción sin límites. Ofertas especiales cada semana en tus juegos favoritos.</p>
+            <a href="#store" class="btn btn-primary bounce-on-hover">Explorar Catálogo <i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+    </section>
+
+    <!-- Sección de Productos (Tienda) -->
+    <section class="store" id="store">
+        <div class="section-header slide-up">
+            <h2>Videojuegos Destacados</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="action">Acción</button>
+                <button class="filter-btn" data-filter="rpg">RPG</button>
+                <button class="filter-btn" data-filter="racing">Carreras</button>
+            </div>
+        </div>
+
+        <!-- Contenedor Grid de Juegos -->
+        <main class="grid-container" id="games-container">
+            <!-- Producto 1 -->
+            <article class="game-card slide-up" data-category="action">
+                <div class="game-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Juego de Acción">
+                    <span class="badge new">Nuevo</span>
+                </div>
+                <div class="game-info">
+                    <span class="game-category">Acción / Aventura</span>
+                    <h3 class="game-title">Cybernetic Assault</h3>
+                    <div class="game-footer">
+                        <span class="game-price">$59.99</span>
+                        <button class="add-to-cart-btn" data-name="Cybernetic Assault" data-price="59.99">
+                            <i class='bx bx-cart-add'></i> Añadir
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Producto 2 -->
+            <article class="game-card slide-up" data-category="rpg">
+                <div class="game-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" alt="Juego RPG">
+                </div>
+                <div class="game-info">
+                    <span class="game-category">Fantasía / RPG</span>
+                    <h3 class="game-title">Elden Shadows</h3>
+                    <div class="game-footer">
+                        <span class="game-price">$49.99</span>
+                        <button class="add-to-cart-btn" data-name="Elden Shadows" data-price="49.99">
+                            <i class='bx bx-cart-add'></i> Añadir
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Producto 3 -->
+            <article class="game-card slide-up" data-category="racing">
+                <div class="game-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1547424169-ca1a21e7d235?auto=format&fit=crop&w=800&q=80" alt="Juego de Carreras">
+                    <span class="badge discount">-20%</span>
+                </div>
+                <div class="game-info">
+                    <span class="game-category">Deportes / Carreras</span>
+                    <h3 class="game-title">Neon Drive 2088</h3>
+                    <div class="game-footer">
+                        <span class="game-price"><del>$29.99</del> $23.99</span>
+                        <button class="add-to-cart-btn" data-name="Neon Drive 2088" data-price="23.99">
+                            <i class='bx bx-cart-add'></i> Añadir
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Producto 4 -->
+            <article class="game-card slide-up" data-category="action">
+                <div class="game-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1605901309584-818e25960b8f?auto=format&fit=crop&w=800&q=80" alt="Juego Shooter">
+                </div>
+                <div class="game-info">
+                    <span class="game-category">Shooter / Multiplayer</span>
+                    <h3 class="game-title">Galactic Warfare</h3>
+                    <div class="game-footer">
+                        <span class="game-price">Gratis</span>
+                        <button class="add-to-cart-btn" data-name="Galactic Warfare" data-price="0.00">
+                            <i class='bx bx-cart-add'></i> Añadir
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Producto 5 -->
+            <article class="game-card slide-up" data-category="rpg">
+                <div class="game-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=800&q=80" alt="Juego Indie">
+                    <span class="badge new">Nuevo</span>
+                </div>
+                <div class="game-info">
+                    <span class="game-category">Indie / Supervivencia</span>
+                    <h3 class="game-title">Lost in the Woods</h3>
+                    <div class="game-footer">
+                        <span class="game-price">$19.99</span>
+                        <button class="add-to-cart-btn" data-name="Lost in the Woods" data-price="19.99">
+                            <i class='bx bx-cart-add'></i> Añadir
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Producto 6 -->
+            <article class="game-card slide-up" data-category="action">
+                <div class="game-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1518721453282-eeb6e8cb73d4?auto=format&fit=crop&w=800&q=80" alt="Juego Pelea">
+                </div>
+                <div class="game-info">
+                    <span class="game-category">Lucha / Arcade</span>
+                    <h3 class="game-title">Street Brawl Alpha</h3>
+                    <div class="game-footer">
+                        <span class="game-price">$39.99</span>
+                        <button class="add-to-cart-btn" data-name="Street Brawl Alpha" data-price="39.99">
+                            <i class='bx bx-cart-add'></i> Añadir
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </section>
+
+    <!-- Ofertas Section (Visual only) -->
+    <section class="offers fade-in" id="offers">
+        <div class="offer-banner">
+            <h2>Oferta de Fin de Semana</h2>
+            <p>Obtén un 50% de descuento en todos los títulos de Fantasía.</p>
+            <button class="btn btn-secondary">Ver Ofertas</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="logo">
+                    <i class='bx bxs-joystick'></i><span>NexusGames</span>
+                </div>
+                <p>Tu destino número uno para los mejores videojuegos. Compra, juega y disfruta de las mejores aventuras.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#store">Tienda</a></li>
+                    <li><a href="#">Soporte</a></li>
+                    <li><a href="#">Políticas de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="#"><i class='bx bxl-discord-alt'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NexusGames. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Contenedor para Toast Notifications (Mensajes dinámicos) -->
+    <div id="toast-container"></div>
+
+    <!-- Archivo JS -->
+    <script src="script.js"></script>
+</body>
+</html>
